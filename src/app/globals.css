@@ -13,9 +13,54 @@
     --foreground: #ededed;
   }
 }
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Basic reset for body, ensure full viewport height */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  background-color: #0a0a0a;
+}
+
+/* Header styling */
+header {
+  height: 60px; /* Fixed height for the header */
+  background-color: #333;
+  color: white;
+  text-align: center;
+  line-height: 60px; /* Center text vertically */
+}
+
+/* Footer styling */
+footer {
+  height: 50px; /* Fixed height for the footer */
+  background-color: #333;
+  color: white;
+  text-align: center;
+  line-height: 50px; /* Center text vertically */
+}
+
+/* Middle content */
+main {
+  flex: 1; /* Take up all available space between header and footer */
+  background-color: #f4f4f4;
+  padding: 20px;
+  min-height: calc(100vh - 110px); /* Subtract header and footer heights (60px + 50px = 110px) */
+  box-sizing: border-box; /* Include padding in the element's total height calculation */
+}
+
+
+
